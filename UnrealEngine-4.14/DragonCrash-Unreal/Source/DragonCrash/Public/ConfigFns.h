@@ -26,7 +26,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Config")
 	static void WriteEngineConfig(const FString& section, const FString& var, const FString& value);
 	
-	//Added a GET function for GEngineIni for compatibility
+	//Added a GET function for GEngineIni for compatibility [DEPRECATED]
 	//UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Config")
 	//static FString getEngineConfigFilePath();
 	

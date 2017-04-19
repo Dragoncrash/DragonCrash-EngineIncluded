@@ -15,10 +15,20 @@ class DRAGONCRASH_API UConfigFns : public UBlueprintFunctionLibrary
 	
 public:
 	UFUNCTION(BlueprintCallable, Category = "Config")
-	static void ReadCustomConfig(const FString& section, const FString& var, FString& out_value, bool& out_valid);
+	static void ReadCustomConfig(const FString& filename, const FString& section, const FString& var, FString& out_value, bool& out_valid, FString& out_filepath);
 
 	UFUNCTION(BlueprintCallable, Category = "Config")
-	static void WriteCustomConfig(FString section, FString var, FString value);
+	static void WriteCustomConfig(const FString& filename, const FString& section, const FString& var, const FString& value);
+
+	UFUNCTION(BlueprintCallable, Category = "Config")
+	static void ReadEngineConfig(const FString& section, const FString& var, FString& out_value, bool& out_valid);
+
+	UFUNCTION(BlueprintCallable, Category = "Config")
+	static void WriteEngineConfig(const FString& section, const FString& var, const FString& value);
 	
+	//Added a GET function for GEngineIni for compatibility [DEPRECATED]
+	//UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Config")
+	//static FString getEngineConfigFilePath();
 	
+	static void checkFileIOEnabled();
 };

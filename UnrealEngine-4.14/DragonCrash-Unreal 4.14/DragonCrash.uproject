@@ -1,0 +1,27 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.14",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "DragonCrash",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "GameLiftServerSDK",
+			"Enabled": true
+		}
+	],
+	"TargetPlatforms": [
+		"LinuxNoEditor",
+		"MacNoEditor",
+		"WindowsNoEditor"
+	]
+}

@@ -1,0 +1,1 @@
+If this document exists, then the current branch is the artist branch
